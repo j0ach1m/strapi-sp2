@@ -1,0 +1,14 @@
+h1,
+h2 {
+  font-family: 'Montserrat', sans-serif;
+}
+body{
+  font-family: 'Roboto', sans-serif;
+ color: $text;
+}
+
+.card-footer{
+  color: $footer-text;
+  font-weight:400;
+  padding: 1em 1.5em;
+}

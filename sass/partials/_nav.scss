@@ -1,0 +1,41 @@
+.navbar-brand img {
+  height: 40px;
+  margin: 0px 60px 0px 30px;
+}
+
+.nav-link {
+  font-size: 22px;
+  color: $white !important;
+  font-weight: 400;
+}
+
+.nav-link.active {
+  font-size: 24px;
+  font-weight: 500;
+}
+
+.navbar-expand-lg .navbar-nav .nav-link {
+  padding: 0px 60px 0px 60px;
+}
+
+.nav-link.admin {
+  font-size: 18px;
+  font-weight: 300;
+}
+
+.form-control {
+  border: none;
+}
+
+.input-group-text {
+  border: none;
+  background: $white;
+}
+
+.fa-search {
+  color: #000;
+}
+
+.navbar-dark .navbar-toggler{
+  border-color: $white;
+}
