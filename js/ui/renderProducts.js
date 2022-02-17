@@ -1,16 +1,15 @@
 import { baseUrl } from "../constants/api.js";
 
 export function renderProducts(productsToRender) {
-  const productsContainer = document.querySelector(".row");
+  const productsContainer = document.querySelector(".product-row");
 
   productsContainer.innerHTML = "";
 
   productsToRender.forEach((product) => {
     productsContainer.innerHTML += `
                                            <div class="col">
-
                                           <div class="card h-100">
-<a href="details.html?id=${product.id}">
+                                            <a href="details.html?id=${product.id}">
                                             <img src="${baseUrl}${product.image.url}" class=" card-img-top"
                                             alt="${product.image.alternativeText}">
                                             <div class="card-body">
@@ -19,10 +18,9 @@ export function renderProducts(productsToRender) {
                                               <div class="card-footer">
                                                 <h5>Price:${product.price},-</h5>
                                               </div>
-  </a>
+                                              </a>
                                           </div>
-
-</div>
+                                          </div>
                                           `;
   });
 }

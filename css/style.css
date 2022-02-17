@@ -11769,4 +11769,23 @@ body {
 .card-body {
   padding: 2.8rem 1rem;
 }
+
+.detail-container {
+  margin: 2rem;
+}
+
+.detail-container .card {
+  max-width: 90%;
+  margin: auto;
+}
+
+.detail-container .card-title {
+  text-align: center;
+  padding: 1.3rem;
+  text-transform: capitalize;
+}
+
+.detail-container img {
+  height: 55%;
+}
 /*# sourceMappingURL=style.css.map */

@@ -3,7 +3,7 @@ import displayMessage from "./constants/displayMessage.js";
 import { renderProducts } from "./ui/renderProducts.js";
 import { searchProducts } from "./ui/searcProducts.js";
 
-const productsUrl = baseUrl + "/products";
+export const productsUrl = baseUrl + "/products/";
 
 console.log(productsUrl);
 

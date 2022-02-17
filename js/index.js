@@ -29,6 +29,7 @@ const featuredContainer = document.querySelector(".featured-container");
 featuredContainer.innerHTML = "";
 
 const featuredUrl = baseUrl + "/products?featured=true";
+
 (async function () {
   try {
     const response = await fetch(featuredUrl);
