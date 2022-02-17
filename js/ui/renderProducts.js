@@ -9,7 +9,7 @@ export function renderProducts(productsToRender) {
     productsContainer.innerHTML += `
                                            <div class="col">
                                           <div class="card h-100">
-                                            <a href="details.html?id=${product.id}">
+                                            <a class="product-img" href="details.html?id=${product.id}">
                                             <img src="${baseUrl}${product.image.url}" class=" card-img-top"
                                             alt="${product.image.alternativeText}">
                                             <div class="card-body">
@@ -22,5 +22,7 @@ export function renderProducts(productsToRender) {
                                           </div>
                                           </div>
                                           `;
+
+
   });
 }

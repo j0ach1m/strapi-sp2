@@ -11744,7 +11744,7 @@ body {
   height: 40vh;
 }
 
-.card img {
+.product-img img {
   height: 65%;
   -o-object-fit: cover;
      object-fit: cover;
@@ -11787,5 +11787,13 @@ body {
 
 .detail-container img {
   height: 55%;
+}
+
+.cart.container {
+  margin-top: 30px;
+}
+
+.cart .card {
+  margin: auto;
 }
 /*# sourceMappingURL=style.css.map */
