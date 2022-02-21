@@ -21,16 +21,16 @@ const countTheSum = function () {
   });
   return sum;
 };
-cartSum.innerHTML += `<div>Total: ${countTheSum().toFixed(2)},-</div>`;
+cartSum.innerHTML += `<div><h4>Total: ${countTheSum().toFixed(2)},-</h4></div>`;
 
 cartItems.forEach((item) => {
   cartContainer.innerHTML += `
-                        <div class="card  mb-3" style="max-width: 540px;">
-                          <div class="row g-0">
-                            <div class="col-md-4">
-                              <img src="${baseUrl}${item.img}" class="img-fluid rounded-start" alt="${item.name}">
+                        <div class="card" style="max-width: 540px;">
+                          <div class="row">
+                            <div class="col-4 background-img" style="background: url(${baseUrl}${item.img})">
+
                             </div>
-                            <div class="col-md-8">
+                            <div class="col-8">
                               <div class="card-body text-center">
                                 <h2 class="card-title">${item.name}</h2>
                                 <p class="card-text">Price: ${item.price}</p>

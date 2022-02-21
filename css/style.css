@@ -11728,12 +11728,20 @@ body {
   margin-bottom: 0;
 }
 
-.message {
+.message.error {
   border: 2px solid red;
   margin: auto;
   text-align: center;
   padding: 20px;
   background: rgba(253, 129, 129, 0.753);
+}
+
+.message.success {
+  border: 2px solid green;
+  margin: auto;
+  text-align: center;
+  padding: 20px;
+  background: rgba(129, 253, 139, 0.753);
 }
 
 .products {
@@ -11789,11 +11797,35 @@ body {
   height: 55%;
 }
 
+.btn-success {
+  background-color: #1aa179;
+  border: none;
+}
+
 .cart.container {
   margin-top: 30px;
 }
 
 .cart .card {
   margin: auto;
+}
+
+.background-img {
+  background-size: cover !important;
+  background-position: center center !important;
+  background-repeat: no-repeat !important;
+}
+
+.sum {
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  text-align: center;
+  margin: 60px auto;
+  background: #1aa179;
+  color: #fff;
+  width: 50%;
+  border-radius: 15%;
+  padding: 25px;
 }
 /*# sourceMappingURL=style.css.map */

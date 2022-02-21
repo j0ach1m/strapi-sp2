@@ -1,7 +1,15 @@
-.message{
+.message.error{
   border: 2px solid red;
   margin: auto;
   text-align: center;
   padding: 20px;
   background: rgba(253, 129, 129, 0.753)
+}
+
+.message.success{
+    border: 2px solid green;
+  margin: auto;
+  text-align: center;
+  padding: 20px;
+  background: rgba(129, 253, 139, 0.753)
 }
