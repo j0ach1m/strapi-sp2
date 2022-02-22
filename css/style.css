@@ -11669,6 +11669,18 @@ body {
   border-color: #fff;
 }
 
+.menu-container a {
+  color: #fff;
+  text-decoration: none;
+  padding: .5rem;
+  margin: auto;
+}
+
+.menu-container button {
+  background: #EFEFEF;
+  color: #000;
+}
+
 .hero-image img {
   height: auto;
   width: 100%;
@@ -11742,6 +11754,14 @@ body {
   text-align: center;
   padding: 20px;
   background: rgba(129, 253, 139, 0.753);
+}
+
+.message.warning {
+  border: 2px solid yellow;
+  margin: auto;
+  text-align: center;
+  padding: 20px;
+  background: rgba(252, 229, 97, 0.753);
 }
 
 .products {

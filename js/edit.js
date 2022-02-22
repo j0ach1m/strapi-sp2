@@ -22,7 +22,7 @@ if (!id) {
 
 const productUrl = baseUrl + "/products/" + id;
 
-const form = document.querySelector("form");
+const form = document.querySelector(".edit-form");
 const name = document.querySelector("#name");
 const price = document.querySelector("#price");
 const description = document.querySelector("#description");
@@ -80,7 +80,7 @@ function submitForm(event) {
 }
 
 async function updateProduct(name, price, description, id) {
-  const url = baseUrl + "products/" + id;
+  const url = baseUrl + "/products/" + id;
   const data = JSON.stringify({
     name: name,
     price: price,

@@ -39,3 +39,16 @@
 .navbar-dark .navbar-toggler{
   border-color: $white;
 }
+
+.menu-container{
+  a{
+    color: #fff;
+    text-decoration: none;
+    padding:.5rem;
+    margin: auto;
+  }
+  button{
+    background: #EFEFEF;
+    color:#000
+  }
+}
