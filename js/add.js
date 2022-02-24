@@ -39,8 +39,8 @@ function submitForm(event){
 
 async function addProduct(name, price, image, description){
   const url = baseUrl + "/products";
-console.log("imgvalue", image);
-  const data = JSON.stringify({title: name, price: price, image: image, description: description });
+
+  const data = JSON.stringify({title: name, price: price, image_url: image, description: description });
 
   const options ={
     method: "POST",
