@@ -13,7 +13,7 @@ createMenu();
 
 const form = document.querySelector(".addForm");
 const name = document.querySelector("#name");
-// const img = document.querySelector("#image");
+const img = document.querySelector("#image");
 const price = document.querySelector("#price");
 const description = document.querySelector("#description");
 const message = document.querySelector(".message-container");
@@ -27,20 +27,20 @@ function submitForm(event){
 
   const nameValue = name.value.trim();
   const priceValue = parseFloat(price.value);
-  // const imgValue = img.value.trim();
+  const imgValue = img.value.trim();
   const descriptionValue = description.value.trim();
 
   if (nameValue.length === 0 || priceValue.length === 0 || isNaN(priceValue) || descriptionValue.length === 0){
     return displayMessage("warning", "supply propper values", ".message-container");
   }
 
-  addProduct(nameValue,priceValue, descriptionValue);
+  addProduct(nameValue,priceValue, imgValue,descriptionValue);
 }
 
-async function addProduct(name, price, description){
+async function addProduct(name, price, image, description){
   const url = baseUrl + "/products";
-
-  const data = JSON.stringify({name: name, price: price, description: description });
+console.log("imgvalue", image);
+  const data = JSON.stringify({title: name, price: price, image: image, description: description });
 
   const options ={
     method: "POST",

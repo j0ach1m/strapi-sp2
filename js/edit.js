@@ -4,11 +4,10 @@ import createMenu from "./constants/createMenu.js";
 import { getToken } from "./ui/storage.js";
 import deleteButton from "./constants/products/deleteButton.js";
 
+
 const token = getToken();
 
-if (!token) {
-  location.href = "/";
-}
+
 
 createMenu();
 
@@ -16,14 +15,20 @@ const queryString = document.location.search;
 const params = new URLSearchParams(queryString);
 const id = params.get("id");
 
-if (!id) {
-  document.location.href = "/";
-}
-
 const productUrl = baseUrl + "/products/" + id;
 
+if (!token) {
+  document.location.href = "details.html?id=" + id;
+}
+
+if (!id) {
+  document.location.href = "/products.html";
+}
+
+
+
 const form = document.querySelector(".edit-form");
-const name = document.querySelector("#name");
+const title = document.querySelector("#name");
 const price = document.querySelector("#price");
 const description = document.querySelector("#description");
 const idInput = document.querySelector("#id");
@@ -34,8 +39,8 @@ const loading = document.querySelector(".loading");
   try {
     const response = await fetch(productUrl);
     const details = await response.json();
-
-    name.value = details.name;
+console.log(details)
+    title.value = details.title;
     price.value = details.price;
     description.value = details.description;
     idInput.value = details.id;
@@ -58,13 +63,13 @@ function submitForm(event) {
 
   message.innerHTML = "";
 
-  const nameValue = name.value.trim();
+  const titleValue = title.value.trim();
   const priceValue = parseFloat(price.value);
   const descriptionValue = description.value.trim();
   const idValue = idInput.value;
 
   if (
-    nameValue.length === 0 ||
+    titleValue.length === 0 ||
     priceValue.length === 0 ||
     isNaN(priceValue) ||
     descriptionValue.length === 0
@@ -76,13 +81,13 @@ function submitForm(event) {
     );
   }
 
-  updateProduct(nameValue, priceValue, descriptionValue, idValue);
+  updateProduct(titleValue, priceValue, descriptionValue, idValue);
 }
 
-async function updateProduct(name, price, description, id) {
+async function updateProduct(title, price, description, id) {
   const url = baseUrl + "/products/" + id;
   const data = JSON.stringify({
-    name: name,
+    title: title,
     price: price,
     description: description,
   });

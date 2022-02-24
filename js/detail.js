@@ -13,7 +13,7 @@ detailContainer.innerHTML = "";
 
 const id = params.get("id");
 
-const url = productsUrl + id;
+const url = productsUrl + 33;
 console.log("urltest", url);
 
 (async function () {
@@ -22,13 +22,15 @@ console.log("urltest", url);
     const details = await response.json();
     const detail = details;
 
+document.title = detail.title;
+
 
 
     detailContainer.innerHTML += `
                                           <div class="card h-100">
                                           <h1 class="card-title">${detail.title}</h1>
-                                          <img src="${baseUrl}${detail.image.url}" class=" card-img-top"
-                                            alt="${detail.image.alternativeText}">
+                                          <img src="${detail.image_url}" class=" card-img-top"
+                                            alt="${detail.title}">
                                             <div class="card-body">
                                             <p class="card-text">${detail.description}</p>
                                             </div>
