@@ -35,10 +35,21 @@ const featuredUrl = baseUrl + "/products?featured=true";
     const response = await fetch(featuredUrl);
     const featured = await response.json();
 
+
     featured.forEach((product) => {
+
+        let imageCheck = "";
+        if (product.image) {
+          imageCheck = baseUrl + product.image.url;
+        }
+        if (product.image_url) {
+          imageCheck = product.image_url;
+        }
+
+
       featuredContainer.innerHTML += `<div class="feature-img"><a class="product" href="details.html?id=${product.id}">
-                                      <img src="${baseUrl}${product.image.url}"
-                                      alt="${product.image.alternativeText}"></a></div>
+                                      <img src="${imageCheck}"
+                                      alt="${product.title}"></a></div>
                                   `;
     });
   } catch (error) {

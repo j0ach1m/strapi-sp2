@@ -41,14 +41,21 @@
 }
 
 .menu-container{
+  padding: 10px;
+  li{
+  list-style: none;
+  }
   a{
-    color: #fff;
+    color: #000;
     text-decoration: none;
-    padding:.5rem;
-    margin: auto;
+    margin:1rem;
+    font-size: 1.2rem;
   }
   button{
-    background: #EFEFEF;
-    color:#000
+    background: $footer-text;
+    color: #fff;
+    padding:.3rem .8rem;
+    border-radius: 5px;
+    border:none;
   }
 }

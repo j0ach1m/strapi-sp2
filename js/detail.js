@@ -13,7 +13,7 @@ detailContainer.innerHTML = "";
 
 const id = params.get("id");
 
-const url = productsUrl + 33;
+const url = productsUrl + id;
 console.log("urltest", url);
 
 (async function () {
@@ -24,19 +24,26 @@ console.log("urltest", url);
 
 document.title = detail.title;
 
+  let imageCheck = "";
+  if (detail.image) {
+    imageCheck = baseUrl + detail.image.url;
+  }
+  if (detail.image_url) {
+    imageCheck = detail.image_url;
+  }
 
 
     detailContainer.innerHTML += `
                                           <div class="card h-100">
                                           <h1 class="card-title">${detail.title}</h1>
-                                          <img src="${detail.image_url}" class=" card-img-top"
+                                          <img src="${imageCheck}" class=" card-img-top"
                                             alt="${detail.title}">
                                             <div class="card-body">
                                             <p class="card-text">${detail.description}</p>
                                             </div>
                                               <div class="card-footer">
                                                 <h5>Price:${detail.price},-</h5>
-                                                <button class="btn btn-success" data-id="${detail.id}" data-img="${detail.image.formats.small.url}"data-name="${detail.title}" data-price="${detail.price}" type="submit">Add to Cart</button>
+                                                <button class="btn btn-success" data-id="${detail.id}" data-img="${imageCheck}"data-name="${detail.title}" data-price="${detail.price}" type="submit">Add to Cart</button>
                                               </div>
                                               </div>
                                   `;

@@ -24,10 +24,12 @@ const countTheSum = function () {
 cartSum.innerHTML += `<div><h4>Total: ${countTheSum().toFixed(2)},-</h4></div>`;
 
 cartItems.forEach((item) => {
+
+
   cartContainer.innerHTML += `
                         <div class="card" style="max-width: 540px;">
                           <div class="row">
-                            <div class="col-4 background-img" style="background: url(${baseUrl}${item.img})">
+                            <div class="col-4 background-img" style="background: url(${item.img})">
 
                             </div>
                             <div class="col-8">

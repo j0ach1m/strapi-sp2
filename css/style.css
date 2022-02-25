@@ -11669,16 +11669,27 @@ body {
   border-color: #fff;
 }
 
+.menu-container {
+  padding: 10px;
+}
+
+.menu-container li {
+  list-style: none;
+}
+
 .menu-container a {
-  color: #fff;
+  color: #000;
   text-decoration: none;
-  padding: .5rem;
-  margin: auto;
+  margin: 1rem;
+  font-size: 1.2rem;
 }
 
 .menu-container button {
-  background: #EFEFEF;
-  color: #000;
+  background: #5d5d5d;
+  color: #fff;
+  padding: .3rem .8rem;
+  border-radius: 5px;
+  border: none;
 }
 
 .hero-image img {
@@ -11847,5 +11858,25 @@ body {
   width: 50%;
   border-radius: 15%;
   padding: 25px;
+}
+
+.form-check {
+  padding: 20px 0 0px 45px;
+}
+
+.form-check label {
+  margin: 10px;
+}
+
+.form-check .form-check-input {
+  width: 4rem;
+}
+
+.form-check-input {
+  height: 2rem;
+}
+
+.btn-container {
+  padding: 3rem 0;
 }
 /*# sourceMappingURL=style.css.map */

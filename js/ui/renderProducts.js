@@ -1,5 +1,6 @@
 import { baseUrl } from "../constants/api.js";
 
+
 export function renderProducts(productsToRender) {
   const productsContainer = document.querySelector(".product-row");
 
@@ -7,21 +8,16 @@ export function renderProducts(productsToRender) {
 
   productsToRender.forEach((product) => {
 
+     let imageCheck = "";
+      if (product.image) {
+        imageCheck = baseUrl + product.image.url;
+      }
+      if (product.image_url) {
+        imageCheck = product.image_url;
+      }
 
-    const imageUrl = baseUrl + product.image.url;
-    const image_url = product.image_url;
 
-    console.log("image", imageUrl);
 
-    let imageCheck = "";
-    if (product.image) {
-      imageCheck = imageUrl;
-    }
-    if (product.image_url) {
-      imageCheck = image_url;
-    }
-
-    console.log("image_url:", image_url);
 
     productsContainer.innerHTML += `
                                            <div class="col">

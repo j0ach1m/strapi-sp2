@@ -4,10 +4,7 @@ import createMenu from "./constants/createMenu.js";
 import { getToken } from "./ui/storage.js";
 import deleteButton from "./constants/products/deleteButton.js";
 
-
 const token = getToken();
-
-
 
 createMenu();
 
@@ -22,37 +19,43 @@ if (!token) {
 }
 
 if (!id) {
-  document.location.href = "/products.html";
+  document.location.href = "product.html";
 }
-
-
 
 const form = document.querySelector(".edit-form");
 const title = document.querySelector("#name");
 const price = document.querySelector("#price");
 const description = document.querySelector("#description");
 const idInput = document.querySelector("#id");
+const imageInput = document.querySelector("#image");
+const featured = document.querySelector("#featured");
 const message = document.querySelector(".message-container");
-const loading = document.querySelector(".loading");
 
 (async function () {
   try {
     const response = await fetch(productUrl);
     const details = await response.json();
-console.log(details)
+    console.log(details);
+
+     let imageCheck = "";
+     if (details.image) {
+       imageCheck = baseUrl + details.image.url;
+     }
+     if (details.image_url) {
+       imageCheck = details.image_url;
+     }
+
     title.value = details.title;
     price.value = details.price;
     description.value = details.description;
     idInput.value = details.id;
+    imageInput.value = imageCheck;
+  featured.checked = details.featured;
 
     deleteButton(details.id);
 
-    console.log(details);
   } catch (error) {
     console.log(error);
-  } finally {
-    loading.style.display = "none";
-    form.style.display = "block";
   }
 })();
 
@@ -67,6 +70,8 @@ function submitForm(event) {
   const priceValue = parseFloat(price.value);
   const descriptionValue = description.value.trim();
   const idValue = idInput.value;
+  const imgValue= imageInput.value.trim();
+  const featuredValue = featured.checked
 
   if (
     titleValue.length === 0 ||
@@ -81,15 +86,17 @@ function submitForm(event) {
     );
   }
 
-  updateProduct(titleValue, priceValue, descriptionValue, idValue);
+  updateProduct(titleValue, priceValue, descriptionValue, idValue, imgValue, featuredValue);
 }
 
-async function updateProduct(title, price, description, id) {
+async function updateProduct(title, price, description, id, image, featured) {
   const url = baseUrl + "/products/" + id;
   const data = JSON.stringify({
     title: title,
     price: price,
     description: description,
+    image_url: image,
+    featured: featured
   });
 
   const options = {
@@ -107,7 +114,7 @@ async function updateProduct(title, price, description, id) {
     console.log(json);
 
     if (json.updated_at) {
-      displayMessage("success", "Product updated", ".message-container");
+      displayMessage("success",`product with id: ${json.id} is updated`, ".message-container");
     }
 
     if (json.error) {
@@ -117,3 +124,4 @@ async function updateProduct(title, price, description, id) {
     console.log(error);
   }
 }
+console.log(deleteButton)
