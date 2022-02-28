@@ -12,7 +12,7 @@
       rel="stylesheet"
     />
     <link href="css/style.css" rel="stylesheet" />
-    <title>Joachim Ring semester project 2</title>
+    <title>Add Product || Joachim Ring semester project 2</title>
   </head>
   <body class="d-flex flex-column h-100">
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
@@ -37,7 +37,7 @@
               <a class="nav-link " href="/">Home</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link active" aria-current="page" href="product.html">Products</a>
+              <a class="nav-link" href="product.html">Products</a>
             </li>
             <li class="nav-item">
               <a class="nav-link" href="cart.html">Cart</a>
@@ -67,8 +67,55 @@
       <div class="container">
             <div class="menu-container"></div>
 
+
             <h1>Add Product</h1>
 
+            <form class="addForm">
+                      <div class="message-container">
+          </div>
+
+          <div class="form-floating mb-3">
+            <input class="form-control" placeholder="Name" id="name" />
+            <label for="name">Title</label>
+          </div>
+          <div class="form-floating mb-3">
+            <input id="price" class="form-control" placeholder="Price" />
+              <label for="price">Price</label>
+          </div>
+          <div class="form-floating mb-3">
+            <input id="image" class="form-control" placeholder="Image Url" />
+              <label for="image">Image url</label>
+          </div>
+          <div class="form-floating">
+            <textarea
+              class="form-control"
+              placeholder="Leave a comment here"
+              id="description"
+              style="min-height: 120px"
+            ></textarea>
+            <label for="floatingTextarea2">Description</label>
+          </div>
+
+          <div class="form-check form-switch">
+              <label class="form-check-label" for="flexSwitchCheckDefault"
+              >Featured Item</label>
+            <input
+              class="form-check-input"
+              type="checkbox"
+              role="switch"
+              id="featured"
+            />
+          </div>
+
+     <div class="container btn-container">
+          <div class="d-grid gap-2">
+            <button class="btn btn-success" id="add">Add</button>
+          </div>
+        </form>
+
+
+
+<!--
             <form class="addForm">
                 <div class="message-container"></div>
 
@@ -92,13 +139,13 @@
                   <input class="form-check-input" type="checkbox" role="switch" id="featured" >
                   <label class="form-check-label" for="flexSwitchCheckDefault">Featured Item</label>
                 </div>
-                <button>Add</button>
+                <button>Add</button> -->
             </form>
         </div>
 
     </main>
 
-    <footer class="footer mt-auto py-3">
+    <footer class="footer mt-auto- py-3">
       <div class="container">
         <div class="row text-center">
           <div class="col-12 col-lg-2 mb-3">

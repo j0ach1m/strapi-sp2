@@ -11680,7 +11680,7 @@ body {
 .menu-container a {
   color: #000;
   text-decoration: none;
-  margin: 1rem;
+  margin: 1rem auto;
   font-size: 1.2rem;
 }
 
@@ -11831,6 +11831,14 @@ body {
 .btn-success {
   background-color: #1aa179;
   border: none;
+}
+
+.success-message {
+  padding: 20px;
+  margin: 20px auto;
+  border: 2px solid green;
+  background-color: #a3cfbb;
+  text-align: center;
 }
 
 .cart.container {

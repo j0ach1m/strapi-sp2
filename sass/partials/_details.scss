@@ -22,3 +22,11 @@
   background-color: $teal-600;
   border:none
 }
+
+.success-message{
+  padding: 20px;
+  margin: 20px auto;
+  border: 2px solid green;
+  background-color: $green-200;
+  text-align: center;
+}

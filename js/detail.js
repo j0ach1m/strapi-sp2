@@ -68,7 +68,9 @@ document.title = detail.title;
 
       currentCart.push(item);
       saveItems(currentCart)
-        displayMessage("success", "item added to cart", ".detail-container");
+       detailContainer.innerHTML += `<div class="success-message">
+                                      <h5>Item successfully added to cart</h5>
+                                      </div>`;
     }
 
     function saveItems(items){

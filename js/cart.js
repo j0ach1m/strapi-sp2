@@ -9,7 +9,7 @@ const cartItems = getExistingItem();
 const cartContainer = document.querySelector(".cart");
 
 if (cartItems.length === 0) {
-  cartContainer.innerHTML = `<div class="sorry">You nothing in your cart Yet.</div>`;
+  cartContainer.innerHTML = `<div class="sorry"><h4>You nothing in your cart, Yet.</h4></div>`;
 }
 const countTheSum = function () {
   let sum = 0;
