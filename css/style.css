@@ -11828,6 +11828,10 @@ body {
   height: 55%;
 }
 
+.detail-container h4 span, .detail-container .h4 span {
+  font-style: italic;
+}
+
 .btn-success {
   background-color: #1aa179;
   border: none;

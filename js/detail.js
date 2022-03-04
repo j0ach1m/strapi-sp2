@@ -42,8 +42,11 @@ document.title = detail.title;
                                             <p class="card-text">${detail.description}</p>
                                             </div>
                                               <div class="card-footer">
-                                                <h5>Price:${detail.price},-</h5>
+                                              <div class=" d-grid gap-2 col-6 mx-auto">
+                                                <h4 class="mx-auto">Price: <span>${detail.price}</span>,-</h4>
+
                                                 <button class="btn btn-success" data-id="${detail.id}" data-img="${imageCheck}"data-name="${detail.title}" data-price="${detail.price}" type="submit">Add to Cart</button>
+                                                </div>
                                               </div>
                                               </div>
                                   `;
