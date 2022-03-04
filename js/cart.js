@@ -1,6 +1,5 @@
 import { getExistingItem } from "./ui/cartFunction.js";
 
-import { baseUrl } from "./constants/api.js";
 
 const cartSum = document.querySelector(".sum");
 
@@ -21,7 +20,7 @@ const countTheSum = function () {
   });
   return sum;
 };
-cartSum.innerHTML += `<div><h4>Total: ${countTheSum().toFixed(2)},-</h4></div>`;
+cartSum.innerHTML += `<div ><h4>Total: ${countTheSum().toFixed(2)} ,-</h4></div>`;
 
 cartItems.forEach((item) => {
 
@@ -30,13 +29,12 @@ cartItems.forEach((item) => {
                         <div class="card" style="max-width: 540px;">
                           <div class="row">
                             <div class="col-4 background-img" style="background: url(${item.img})">
-
                             </div>
                             <div class="col-8">
                               <div class="card-body text-center">
                                 <h2 class="card-title">${item.name}</h2>
                                 <p class="card-text">Price: ${item.price}</p>
-                                <a href="details.html?id=${item.id}">View More</a>
+                                <a href="details.html?id=${item.id}" class="cart-a">View Product</a>
                               </div>
                             </div>
                           </div>

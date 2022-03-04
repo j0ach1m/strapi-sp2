@@ -1,29 +1,29 @@
-.products{
-  padding:60px;
+.products {
+  padding: 60px;
 }
 
-.col{
+.col {
   height: 40vh;
 }
 
-.product-img img{
- height: 65%;
- object-fit:cover;
+.product-img img {
+  height: 65%;
+  object-fit: cover;
 }
 
-.card-footer{
+.card-footer {
   border-top: none;
 }
 
-.row{
+.row {
   justify-content: space-evenly;
 }
 
-.card a{
+.card a {
   text-decoration: none;
   height: 100%;
   color: $text;
 }
-.card-body{
-  padding: 2.8rem 1rem ;
+.card-body {
+  padding: 2.8rem 1rem;
 }

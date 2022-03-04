@@ -8,14 +8,12 @@ export default function createMenu() {
 
   const username = getUsername();
 
-  let authLink = `<a href="login.html" class="${pathname === "/login.html" ? "active" : ""}">Login</a>`;
+  let authLink = `<a href="login.html" class="${pathname === "/login.html" ? "active" : "" }">Login</a>`;
 
   if (username) {
-    authLink = `<li class="nav-item"><a href="add.html" class="${pathname === "/add.html" ? "active" : ""}"> Add Product</a></li>
-                <li class="nav-item"><a href="product.html" class="${pathname === "/product.html" ? "active" : ""}"> Edit Product</a></li>
+    authLink = `<li class="nav-item"><a href="add.html" class="${pathname === "/add.html" ? "active" : "" }"> Add Product</a></li>
+                <li class="nav-item"><a href="product.html" class="${pathname === "/product.html" ? "active" : "" }"> Edit Product</a></li>
                  <button id="logout-button"> Logout ${username} </button>`;
-
-
   }
 
   container.innerHTML = ` <ul class="newMenu nav-item">

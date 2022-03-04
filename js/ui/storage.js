@@ -23,11 +23,10 @@ export function getUsername() {
   return null;
 }
 
-let itemsToRemove = ["token", "user"]
+let itemsToRemove = ["token", "user"];
 
 export function clearStorage() {
-  itemsToRemove.forEach(item =>
-  localStorage.removeItem(item));
+  itemsToRemove.forEach((item) => localStorage.removeItem(item));
 }
 
 function saveToStorage(key, value) {

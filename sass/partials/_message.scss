@@ -1,23 +1,23 @@
-.message.error{
+.message.error {
   border: 2px solid red;
   margin: auto;
   text-align: center;
   padding: 20px;
-  background: rgba(253, 129, 129, 0.753)
+  background: rgba(253, 129, 129, 0.753);
 }
 
-.message.success{
-    border: 2px solid green;
+.message.success {
+  border: 2px solid green;
   margin: auto;
   text-align: center;
   padding: 20px;
-  background: rgba(129, 253, 139, 0.753)
+  background: rgba(129, 253, 139, 0.753);
 }
 
-.message.warning{
-    border: 2px solid yellow;
+.message.warning {
+  border: 2px solid yellow;
   margin: auto;
   text-align: center;
   padding: 20px;
-  background: rgba(252, 229, 97, 0.753)
+  background: rgba(252, 229, 97, 0.753);
 }

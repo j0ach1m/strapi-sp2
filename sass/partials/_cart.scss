@@ -1,25 +1,28 @@
-
-.cart.container{
-  margin-top:30px;
+.cart.container {
+  margin-top: 30px;
 }
 
-.cart{
-  .card{
+.cart {
+  .card {
     margin: auto;
   }
 
+  .cart-a{
+    font-style: italic;
+    color:$footer-text;
+  }
 }
-.background-img{
+.background-img {
   background-size: cover !important;
   background-position: center center !important;
   background-repeat: no-repeat !important;
 }
-.sum{
+.sum {
   justify-content: center;
   text-align: center;
-  margin:60px auto;
-  background:$teal-600;
-  color:#fff;
+  margin: 60px auto;
+  background: $teal-600;
+  color: #fff;
   width: 50%;
   border-radius: 15%;
   padding: 25px;

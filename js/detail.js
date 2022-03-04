@@ -14,7 +14,7 @@ detailContainer.innerHTML = "";
 const id = params.get("id");
 
 const url = productsUrl + id;
-console.log("urltest", url);
+
 
 (async function () {
   try {
@@ -34,21 +34,19 @@ document.title = detail.title;
 
 
     detailContainer.innerHTML += `
-                                          <div class="card h-100">
-                                          <h1 class="card-title">${detail.title}</h1>
-                                          <img src="${imageCheck}" class=" card-img-top"
-                                            alt="${detail.title}">
-                                            <div class="card-body">
-                                            <p class="card-text">${detail.description}</p>
-                                            </div>
-                                              <div class="card-footer">
-                                              <div class=" d-grid gap-2 col-6 mx-auto">
-                                                <h4 class="mx-auto">Price: <span>${detail.price}</span>,-</h4>
-
-                                                <button class="btn btn-success" data-id="${detail.id}" data-img="${imageCheck}"data-name="${detail.title}" data-price="${detail.price}" type="submit">Add to Cart</button>
-                                                </div>
-                                              </div>
-                                              </div>
+                                  <div class="card h-100">
+                                    <h1 class="card-title">${detail.title}</h1>
+                                    <img src="${imageCheck}" class=" card-img-top"alt="${detail.title}">
+                                      <div class="card-body">
+                                        <p class="card-text">${detail.description}</p>
+                                      </div>
+                                      <div class="card-footer">
+                                        <div class=" d-grid gap-2 col-6 mx-auto">
+                                         <h4 class="mx-auto">Price: <span>${detail.price}</span>,-</h4>
+                                         <button class="btn btn-success" data-id="${detail.id}" data-img="${imageCheck}"data-name="${detail.title}" data-price="${detail.price}" type="submit">Add to Cart</button>
+                                        </div>
+                                    </div>
+                                  </div>
                                   `;
 
     const cartBtn = document.querySelectorAll(".btn");

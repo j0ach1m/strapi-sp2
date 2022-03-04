@@ -35,7 +35,6 @@ const message = document.querySelector(".message-container");
   try {
     const response = await fetch(productUrl);
     const details = await response.json();
-    console.log(details);
 
      let imageCheck = "";
      if (details.image) {
@@ -50,7 +49,7 @@ const message = document.querySelector(".message-container");
     description.value = details.description;
     idInput.value = details.id;
     imageInput.value = imageCheck;
-  featured.checked = details.featured;
+    featured.checked = details.featured;
 
     deleteButton(details.id);
 
@@ -79,11 +78,7 @@ function submitForm(event) {
     isNaN(priceValue) ||
     descriptionValue.length === 0
   ) {
-    return displayMessage(
-      "warning",
-      "Please supply proper values",
-      ".message-container"
-    );
+    return displayMessage("warning", "Please supply proper values",".message-container");
   }
 
   updateProduct(titleValue, priceValue, descriptionValue, idValue, imgValue, featuredValue);

@@ -5,8 +5,6 @@ import { searchProducts } from "./ui/searcProducts.js";
 
 export const productsUrl = baseUrl + "/products/";
 
-console.log(productsUrl);
-
 (async function () {
   try {
     const response = await fetch(productsUrl);

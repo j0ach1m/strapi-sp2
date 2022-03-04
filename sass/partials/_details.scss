@@ -1,33 +1,31 @@
-.detail-container{
- margin:2rem;
+.detail-container {
+  margin: 2rem;
 
-
-  .card{
+  .card {
     max-width: 90%;
-    margin:auto;
+    margin: auto;
   }
 
-  .card-title{
+  .card-title {
     text-align: center;
     padding: 1.3rem;
     text-transform: capitalize;
   }
 
-  img{
-    height: 55%
+  img {
+    height: 55%;
   }
 
-  h4 span{
+  h4 span {
     font-style: italic;
   }
-
 }
-.btn-success{
+.btn-success {
   background-color: $teal-600;
-  border:none
+  border: none;
 }
 
-.success-message{
+.success-message {
   padding: 20px;
   margin: 20px auto;
   border: 2px solid green;
