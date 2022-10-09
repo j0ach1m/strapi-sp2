@@ -1,6 +1,9 @@
 .hero-image img {
-  height: auto;
+  height: 80vh;
   width: 100%;
+  object-fit:cover;
+   object-position: center;
+
 }
 
 .heading {
