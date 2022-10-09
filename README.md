@@ -22,8 +22,10 @@ npm run develop
 An overview of the startpage.
 
 ## Description
-Customer-facing pages
-Home page
+Customer-facing pages:
+
+# Home page
+
 The home page must include:
 
 A hero banner with an image that is uploaded to Strapi. You can find this in the Home single type in the provided Strapi project.
@@ -54,7 +56,7 @@ After the list of products, display the total price of all the products in the c
 
 Note: the cart page is not a checkout page. No payments or user details are required to be taken.
 
-Admin section
+# Admin section
 The admin section (apart from the log in form) must only be accessible to logged in admin users and must include the following features.
 
 Login/Logout
