@@ -15,7 +15,7 @@ npm run develop
 ```
 
 
-# JavaScript Frameworks Course Assignment
+# Semester Project
 
 ![image](./public/uploads/screenshot/Skjermbilde%202022-10-09%20kl.%2017.28.50.png)
 
