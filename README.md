@@ -22,7 +22,6 @@ npm run develop
 An overview of the startpage.
 
 ## Description
-# Customer-facing pages:
 
 ## Home page
 
